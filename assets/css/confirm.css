@@ -1,0 +1,56 @@
+.confirm-header {
+    color: #17a2b8;
+    text-align: center;
+}
+
+.card {
+    margin: 25px 0;
+    border: 1px solid #17a2b8;
+}
+
+.left {
+    float: left;
+    width: 25%;
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #17a2b8;
+}
+
+.right {
+    float: right;
+    color: #17a2b8;
+    width: 65%;
+}
+
+.confirm-title {
+    height: 50px;
+}
+
+.confirm-title2 {
+    height: 155px;
+}
+
+.confirm-data {
+    height: 50px;
+}
+
+.confirm-data2 {
+    height: 155px;
+}
+
+.personal-header {
+    margin-left: 2%;
+    color: #17a2b8;
+    margin-bottom: 30px;
+}
+
+.btns {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-danger {
+    padding: 6px 20px;
+    margin-right: 20px;
+}

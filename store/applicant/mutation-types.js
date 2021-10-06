@@ -1,0 +1,3 @@
+export const SET_APPLICANT = 'SET_APPLICANT'
+export const STORE_FIILE = 'STORE_FIILE'
+export const ERROR_STATUS = 'ERROR_STATUS'
