@@ -13,57 +13,57 @@ extend('required', {
 extend('namelength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.NAME.MAX,
-    message: 'This field is max 100 characters',
+    message: `This field is max ${constant.VALIDATION.NAME.MAX} characters`,
 })
 extend('phonelength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.PH.MAX,
-    message: 'This field is max 11 characters',
+    message: `This field is max ${constant.VALIDATION.PH.MAX} characters`,
 })
 extend('addresslength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.ADDRESS.MAX,
-    message: 'This field is max 255 characters',
+    message: `This field is max ${constant.VALIDATION.ADDRESS.MAX} characters`,
 })
 extend('unilength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.UNI.MAX,
-    message: 'This field is max 100 characters',
+    message: `This field is max ${constant.VALIDATION.UNI.MAX} characters`,
 })
 extend('degreelength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.DEGREE.MAX,
-    message: 'This field is max 100 characters',
+    message: `This field is max ${constant.VALIDATION.DEGREE.MAX} characters`,
 })
 extend('yearlength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.YEAR.MAX,
-    message: 'This field is max 20 characters',
+    message: `This field is max ${constant.VALIDATION.YEAR.MAX} characters`,
 })
 extend('diplomalength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.DIPLOMA.MAX,
-    message: 'This field is max 100 characters',
+    message: `This field is max ${constant.VALIDATION.DIPLOMA.MAX} characters`,
 })
 extend('certificatelength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.CERTIFICATE.MAX,
-    message: 'This field is max 100 characters',
+    message: `This field is max ${constant.VALIDATION.CERTIFICATE.MAX} characters`,
 })
 extend('languagelength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.LANGUAGE.MAX,
-    message: 'This field is max 255 characters',
+    message: `This field is max ${constant.VALIDATION.LANGUAGE.MAX} characters`,
 })
 extend('explength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.JOBEXP.MAX,
-    message: 'This field is max 255 characters',
+    message: `This field is max ${constant.VALIDATION.JOBEXP.MAX} characters`,
 })
 extend('expyearlength', {
     ...length,
     validate: (value) => value.length <= constant.VALIDATION.EXPYEAR.MAX,
-    message: 'This field is max 3 characters',
+    message: `This field is max ${constant.VALIDATION.EXPYEAR.MAX} characters`,
 })
 export default {
     components: {
