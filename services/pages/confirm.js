@@ -37,7 +37,7 @@ export default {
          * @return void
          */
         cancleApplicant() {
-            this.$store.dispatch('applicant/clearApplicantInfo')
+            // this.$store.dispatch('applicant/clearApplicantInfo')
             this.$router.push({
                 name: 'index',
             })

@@ -18,6 +18,7 @@
                                 class="form-control"
                                 placeholder="Enter Name"
                             />
+
                             <span class="input-invalid-message errorMsg">
                                 {{ errors[0] }}
                             </span>
@@ -377,26 +378,30 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-lg-6">
-                                <label for="languageSkill"
-                                    >Programming Skills</label
-                                >
-                                <input
-                                    id="languageSkill"
-                                    v-model="applicant.programming_language"
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Programming Language"
-                                />
+                                <ValidationProvider>
+                                    <label for="languageSkill"
+                                        >Programming Skills</label
+                                    >
+                                    <input
+                                        id="languageSkill"
+                                        v-model="applicant.programming_language"
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Programming Language"
+                                    />
+                                </ValidationProvider>
                             </div>
                             <div class="col-lg-6">
-                                <label for="languageLevel">Level</label>
-                                <input
-                                    id="languageLevel"
-                                    v-model="applicant.programming_level"
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Level"
-                                />
+                                <ValidationProvider>
+                                    <label for="languageLevel">Level</label>
+                                    <input
+                                        id="languageLevel"
+                                        v-model="applicant.programming_level"
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Level"
+                                    />
+                                </ValidationProvider>
                             </div>
                         </div>
                     </div>

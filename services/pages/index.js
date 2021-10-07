@@ -71,39 +71,41 @@ export default {
         ValidationObserver,
     },
     auth: false,
-    data: () => ({
-        valid: true,
-        applicant: {
-            name: '',
-            profile_photo: null,
-            date: '',
-            phone_no1: '',
-            phone_no2: '',
-            email: '',
-            current_address: '',
-            hometown_address: '',
-            bachelor_university: '',
-            bachelor_year: '',
-            bachelor_degree: '',
-            master_university: '',
-            master_year: '',
-            master_degree: '',
-            diploma_name: '',
-            certificate: '',
-            english: '',
-            japanese: '',
-            other: '',
-            internship_info: '',
-            job_experience: '',
-            total_exp_year: '',
-            programming_language: '',
-            programming_level: '',
-        },
-        errorImage: 'url of an image to use to indicate an error',
-        errImg: null,
-        error: null,
-        previews: [],
-    }),
+    data: () => {
+        return {
+            valid: true,
+            applicant: {
+                name: '',
+                profile_photo: null,
+                date: '',
+                phone_no1: '',
+                phone_no2: '',
+                email: '',
+                current_address: '',
+                hometown_address: '',
+                bachelor_university: '',
+                bachelor_year: '',
+                bachelor_degree: '',
+                master_university: '',
+                master_year: '',
+                master_degree: '',
+                diploma_name: '',
+                certificate: '',
+                english: '',
+                japanese: '',
+                other: '',
+                internship_info: '',
+                job_experience: '',
+                total_exp_year: '',
+                programming_language: '',
+                programming_level: '',
+            },
+            errorImage: 'url of an image to use to indicate an error',
+            errImg: null,
+            error: null,
+            previews: [],
+        }
+    },
 
     methods: {
         /**
@@ -164,5 +166,10 @@ export default {
         errImage() {
             return this.errImg
         },
+    },
+    created() {
+        if (this.$store.state.applicant.applicant) {
+            this.applicant = this.$store.state.applicant.applicant
+        }
     },
 }
