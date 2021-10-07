@@ -1,3 +1,4 @@
+import { mapGetters } from 'vuex'
 import { extend, ValidationProvider, ValidationObserver } from 'vee-validate'
 import { required, length } from 'vee-validate/dist/rules'
 import constant from '~/constants'
@@ -166,10 +167,13 @@ export default {
         errImage() {
             return this.errImg
         },
+        ...mapGetters({
+            applicantList: 'applicant/applicantList',
+        }),
     },
     created() {
-        if (this.$store.state.applicant.applicant) {
-            this.applicant = this.$store.state.applicant.applicant
+        if (this.applicantList) {
+            this.applicant = this.applicantList
         }
     },
 }
