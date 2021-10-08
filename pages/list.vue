@@ -62,6 +62,16 @@
                     Details
                 </b-button>
                 <b-button
+                    class="mr-1"
+                    size="sm"
+                    :to="{
+                        name: 'edit',
+                        params: { id: row.item },
+                    }"
+                >
+                    Edit
+                </b-button>
+                <b-button
                     class="mr-1 btn btn-danger"
                     size="sm"
                     @click="remove(row.item.id)"

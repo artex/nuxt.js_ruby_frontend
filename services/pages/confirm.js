@@ -1,6 +1,11 @@
+import { mapGetters } from 'vuex'
 export default {
     auth: false,
-
+    middleware({ store, redirect }) {
+        if (!store.state.applicant.applicant) {
+            return redirect('/')
+        }
+    },
     methods: {
         /**
          * submit
@@ -47,5 +52,8 @@ export default {
         confirmApplicantInfo() {
             return this.$store.state.applicant.applicant
         },
+        ...mapGetters({
+            applicantList: 'applicant/applicantList',
+        }),
     },
 }

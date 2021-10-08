@@ -1,4 +1,9 @@
 export default {
+    middleware({ params, redirect }) {
+        if (!params.id.id) {
+            return redirect('/list')
+        }
+    },
     data() {
         return {
             applicant: {},

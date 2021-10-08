@@ -54,6 +54,27 @@ export default {
     },
 
     /**
+     * Save edit data to database
+     * @param {*} commit mutate applicant data and file data
+     * @param { object } editData Applicant edit data from Edit Page
+     * @return void
+     */
+    confirmEdit({ commit }, editData) {
+        commit(SET_APPLICANT, editData)
+        this.$router.push('/confirmedit')
+    },
+
+    /**
+     * Set "file" data to "storeFile"
+     * @param {*} commit mutate profile_photo
+     * @param {File} editImg file data
+     * @return void
+     */
+    editImg({ commit }, editImg) {
+        commit(STORE_FIILE, editImg)
+    },
+
+    /**
      * Clear all data when cancle
      * @param {*} commit mutate applicant data and file
      * @return void

@@ -100,6 +100,13 @@ export default {
             this.infoModal.content = ''
         },
         /**
+         * Edit Data
+         * @param {id} id id for edit
+         */
+        edit(id) {
+            console.log(id)
+        },
+        /**
          * Delete Data
          * @param {id} id id for delete
          * @retrun void
